@@ -83,8 +83,8 @@ public class TestMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public bool IsNotTrue(bool value)
     {
-        // value = true;
-        return !value;
+        value = true;
+        return value;
         throw new NotImplementedException();
     }
     /// <summary>
@@ -95,7 +95,7 @@ public class TestMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public bool IsNotFalse(bool value)
     {
-        // value = false;
+        value = false;
         return value;
         throw new NotImplementedException();
     }
@@ -111,7 +111,7 @@ public class TestMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public bool CanEnter(int age)
     {
-        if (age <= 18)
+        if (age >= 18)
         {
             return true;
         }
