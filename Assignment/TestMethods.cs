@@ -139,6 +139,9 @@ public class TestMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public double Square(double a)
     {
+        double lil = a * a;
+        Math.Sqrt(lil);
+        return lil;
         throw new NotImplementedException();
     }
     /// <summary>
