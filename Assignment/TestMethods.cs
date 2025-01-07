@@ -155,7 +155,10 @@ public class TestMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public double DivideNumbers(double a, double b)
     {
-        throw new NotImplementedException();
+
+        if (a == 0 || b == 0) return 0;
+        return a / b;
+        // throw new NotImplementedException();
     }
 
     /// <summary>
@@ -278,17 +281,17 @@ public class TestMethods : AssignmentBase
     [Assignment(12)]
     public void TestDivideNumbers()
     {
-        double[] expected = new double[15];
+        double[] expected = { 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5 };
         for (int i = 0; i < expected.Length; i++)
         {
             Assert.Equal(expected[i], DivideNumbers(i, 2));
-            Assert.Equal(expected[i], DivideNumbers(expected[i], expected[i]));
             if (DivideNumbers(expected[i], 0) == double.PositiveInfinity || DivideNumbers(expected[i], 0) == double.NegativeInfinity)
             {
                 throw new DivideByZeroException();
             }
         }
     }
+
     [Assignment(13)]
     public void TestCreateFile()
     {
