@@ -129,6 +129,8 @@ public class TestMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public Dictionary<int, string> DictionaryMethod()
     {
+        Dictionary<int, string> fancy = new Dictionary<int, string>();
+        return fancy;
         throw new NotImplementedException("");
     }
     /// <summary>
