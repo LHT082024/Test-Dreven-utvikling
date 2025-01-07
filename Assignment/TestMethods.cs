@@ -16,7 +16,7 @@ public class TestMethods : AssignmentBase
     public string StringMethod(string str)
     {
         return str;
-        // throw new NotImplementedException();
+        throw new NotImplementedException();
     }
     /// <summary>
     /// Return a new string array
@@ -26,6 +26,7 @@ public class TestMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public string[] StringArrayMethod(string[] arr)
     {
+        return arr;
         throw new NotImplementedException();
     }
     /// <summary>
@@ -37,6 +38,7 @@ public class TestMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public int AddIntMethod(int a, int b)
     {
+        return a + b;
         throw new NotImplementedException();
     }
     /// <summary>
@@ -48,6 +50,7 @@ public class TestMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public double MultiplyDoubleMethod(double a, double b)
     {
+        return a * b;
         throw new NotImplementedException();
     }
     /// <summary>
@@ -57,6 +60,8 @@ public class TestMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public List<double> ListDoubleMethod()
     {
+        List<double> listing = new List<double>();
+        return listing;
         throw new NotImplementedException();
     }
     /// <summary>
@@ -67,6 +72,7 @@ public class TestMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public char CharMethod(char c)
     {
+        return c;
         throw new NotImplementedException();
     }
     /// <summary>
@@ -77,6 +83,8 @@ public class TestMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public bool IsNotTrue(bool value)
     {
+        // value = true;
+        return !value;
         throw new NotImplementedException();
     }
     /// <summary>
@@ -87,6 +95,8 @@ public class TestMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public bool IsNotFalse(bool value)
     {
+        // value = false;
+        return value;
         throw new NotImplementedException();
     }
     public List<Generics> GenericTypeMethod(Generics e, Generics t)
@@ -101,6 +111,14 @@ public class TestMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public bool CanEnter(int age)
     {
+        if (age <= 18)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
         throw new NotImplementedException();
     }
     /// <summary>
